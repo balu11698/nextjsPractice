@@ -16,9 +16,9 @@ export default async function handler(
   res: NextApiResponse<any>
 ) {
   // await middleware(req, res, cors);
-  // return getAnimeData(req, res);
-  const response = await axios.get(
-    "https://api.jikan.moe/v4/seasons/now?page=1"
-  );
-  return res.send(response.data);
+  return getAnimeData(req, res);
+  // const response = await axios.get(
+  //   "https://api.jikan.moe/v4/seasons/now?page=1"
+  // );
+  // return res.send(response.data);
 }
