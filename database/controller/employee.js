@@ -17,15 +17,6 @@ export const getAllEmployees = async (req, res) => {
 //   res.json({ id: req.params.id });
 // };
 
-export const getAnimeData = async (req, res) => {
-  try {
-    const data = await axios.get("https://api.jikan.moe/v4/seasons/now?page=1");
-    res.json(data.data);
-  } catch (err) {
-    res.status(400).json({ message: "Failed" });
-  }
-};
-
 export const createNewEmployee = async (req, res) => {
   if (!req.body.firstname) {
     res.status(400).json({ message: "Firstname Should not be empty" });
