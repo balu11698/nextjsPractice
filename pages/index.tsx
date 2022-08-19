@@ -6,15 +6,15 @@ import { useCallback, useEffect } from "react";
 
 const Home: NextPage = (props: any) => {
   console.log(props.res);
-  // const router = useRouter();
-  // const fetchEmployee = useCallback(async () => {
-  //   const res = await axios.get("http://localhost:3000/api/employee");
-  //   console.log(res);
-  // }, []);
+  const router = useRouter();
+  const fetchEmployee = useCallback(async () => {
+    const res = await axios.get("/api/employee");
+    console.log(res);
+  }, []);
 
-  // useEffect(() => {
-  //   fetchEmployee();
-  // }, []);
+  useEffect(() => {
+    fetchEmployee();
+  }, []);
 
   return (
     <div>
