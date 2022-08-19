@@ -25,11 +25,10 @@ const Home: NextPage = (props: any) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps(req: any) {
   try {
-    const res = await axios.get(
-      "https://nextjs-anime-try.netlify.app/api/employee"
-    );
+    const hostname = req.req.headers.host;
+    const res = await axios.get(`https://${hostname}/api/employee`);
     return {
       props: { res: res.data },
     };

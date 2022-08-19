@@ -6,7 +6,6 @@ import { animated, config, useSpring, useTransition } from "react-spring";
 
 const NavBar = ({ children }: any) => {
   const router = useRouter();
-  console.log(router);
 
   const [transition, api] = useSpring(() => ({
     from: { opacitiy: 0, transform: "translate3d(-20px,0,0)" },
