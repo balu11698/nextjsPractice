@@ -28,9 +28,7 @@ const Home: NextPage = (props: any) => {
 export async function getServerSideProps(req: any) {
   try {
     const hostname = req.req.headers.host;
-    const res = await axios.get(
-      `https://nextjs-practice-anime.vercel.app//api/employee`
-    );
+    const res = await axios.get(`https://${hostname}/api/employee`);
     return {
       props: { res: res.data },
     };

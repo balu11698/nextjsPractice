@@ -3,10 +3,10 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import {
   getAnimeData,
   getAllEmployees,
-} from "../../database/controller/employee";
+} from "../../database/controller/employee.js";
 import Cors from "cors";
-import corsOptions from "../../database/config/corsOptions";
-import middleware from "../../database/middlware/middleware";
+import corsOptions from "../../database/config/corsOptions.js";
+import middleware from "../../database/middlware/middleware.js";
 import axios from "axios";
 
 const cors = Cors(corsOptions);
